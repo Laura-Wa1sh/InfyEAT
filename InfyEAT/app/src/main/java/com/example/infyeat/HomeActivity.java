@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         vendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openVendorLoginActivity();
+                openNavigationActivity();
             }
 
         });
@@ -44,6 +44,11 @@ public class HomeActivity extends AppCompatActivity {
 
     public void openVendorLoginActivity(){
         Intent loginIntent = new Intent(this, VendorLoginActivity.class);
+        startActivity(loginIntent);
+    }
+
+    public void openNavigationActivity(){
+        Intent loginIntent = new Intent(this, NavigationActivity.class);
         startActivity(loginIntent);
     }
 }
